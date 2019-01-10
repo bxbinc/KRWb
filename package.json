@@ -1,0 +1,27 @@
+{
+  "name": "krwb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "truffle console --network local",
+    "test": "truffle compile && truffle test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "6.2.0",
+    "openzeppelin-eth": "^2.0.2",
+    "truffle-hdwallet-provider": "0.0.6",
+    "zos-lib": "^2.0.1"
+  },
+  "devDependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-preset-stage-3": "^6.17.0",
+    "babel-register": "^6.23.0",
+    "solidity-coverage": "^0.5.11",
+    "zos": "^2.0.1"
+  }
+}
