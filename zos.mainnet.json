@@ -1,0 +1,491 @@
+{
+  "contracts": {
+    "MultisigWallet": {
+      "address": "0x454621ad83ebbc01367a8006080b15880f71e967",
+      "constructorCode": "608060405234801561001057600080fd5b50613ddf806100206000396000f300",
+      "bodyBytecodeHash": "978e222d109d70b1f54cc7610f66a148eee0272fadc150fc9aca08edcc13b9df",
+      "localBytecodeHash": "a9f44590d050714a38127524e7e4d3c3fc2cfb37e5b4e986199c040f34409d53",
+      "deployedBytecodeHash": "a9f44590d050714a38127524e7e4d3c3fc2cfb37e5b4e986199c040f34409d53",
+      "types": {
+        "t_bool": {
+          "id": "t_bool",
+          "kind": "elementary",
+          "label": "bool"
+        },
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        },
+        "t_array:50<t_uint256>": {
+          "id": "t_array:50<t_uint256>",
+          "valueType": "t_uint256",
+          "length": "50",
+          "kind": "array",
+          "label": "uint256[50]"
+        },
+        "t_struct<MultisigWallet.Transaction>": {
+          "id": "t_struct<MultisigWallet.Transaction>",
+          "kind": "struct",
+          "label": "MultisigWallet.Transaction",
+          "members": [
+            {
+              "label": "to",
+              "astId": 82,
+              "type": "t_address",
+              "src": "1186:10:0"
+            },
+            {
+              "label": "value",
+              "astId": 84,
+              "type": "t_uint256",
+              "src": "1206:13:0"
+            },
+            {
+              "label": "data",
+              "astId": 86,
+              "type": "t_bytes",
+              "src": "1229:10:0"
+            },
+            {
+              "label": "submittedAt",
+              "astId": 88,
+              "type": "t_uint256",
+              "src": "1249:19:0"
+            },
+            {
+              "label": "expiredAt",
+              "astId": 90,
+              "type": "t_uint256",
+              "src": "1278:17:0"
+            },
+            {
+              "label": "memo",
+              "astId": 92,
+              "type": "t_string",
+              "src": "1305:11:0"
+            },
+            {
+              "label": "executed",
+              "astId": 94,
+              "type": "t_bool",
+              "src": "1326:13:0"
+            }
+          ]
+        },
+        "t_address": {
+          "id": "t_address",
+          "kind": "elementary",
+          "label": "address"
+        },
+        "t_bytes": {
+          "id": "t_bytes",
+          "kind": "elementary",
+          "label": "bytes"
+        },
+        "t_string": {
+          "id": "t_string",
+          "kind": "elementary",
+          "label": "string"
+        },
+        "t_mapping<t_struct<MultisigWallet.Transaction>>": {
+          "id": "t_mapping<t_struct<MultisigWallet.Transaction>>",
+          "valueType": "t_struct<MultisigWallet.Transaction>",
+          "label": "mapping(key => MultisigWallet.Transaction)",
+          "kind": "mapping"
+        },
+        "t_mapping<t_bool>": {
+          "id": "t_mapping<t_bool>",
+          "valueType": "t_bool",
+          "label": "mapping(key => bool)",
+          "kind": "mapping"
+        },
+        "t_array:dyn<t_address>": {
+          "id": "t_array:dyn<t_address>",
+          "valueType": "t_address",
+          "length": "dyn",
+          "kind": "array",
+          "label": "address[]"
+        }
+      },
+      "storage": [
+        {
+          "contract": "Initializable",
+          "path": "zos-lib/contracts/Initializable.sol",
+          "label": "initialized",
+          "astId": 3022,
+          "type": "t_bool",
+          "src": "749:24:12"
+        },
+        {
+          "contract": "Initializable",
+          "path": "zos-lib/contracts/Initializable.sol",
+          "label": "initializing",
+          "astId": 3024,
+          "type": "t_bool",
+          "src": "868:25:12"
+        },
+        {
+          "contract": "Initializable",
+          "path": "zos-lib/contracts/Initializable.sol",
+          "label": "______gap",
+          "astId": 3073,
+          "type": "t_array:50<t_uint256>",
+          "src": "1883:29:12"
+        },
+        {
+          "contract": "MultisigWallet",
+          "path": "contracts/multisig/MultisigWallet.sol",
+          "label": "transactions",
+          "astId": 59,
+          "type": "t_mapping<t_struct<MultisigWallet.Transaction>>",
+          "src": "854:48:0"
+        },
+        {
+          "contract": "MultisigWallet",
+          "path": "contracts/multisig/MultisigWallet.sol",
+          "label": "invalidated",
+          "astId": 63,
+          "type": "t_mapping<t_bool>",
+          "src": "908:40:0"
+        },
+        {
+          "contract": "MultisigWallet",
+          "path": "contracts/multisig/MultisigWallet.sol",
+          "label": "confirmations",
+          "astId": 69,
+          "type": "t_mapping<t_bool>",
+          "src": "954:62:0"
+        },
+        {
+          "contract": "MultisigWallet",
+          "path": "contracts/multisig/MultisigWallet.sol",
+          "label": "isOwner",
+          "astId": 73,
+          "type": "t_mapping<t_bool>",
+          "src": "1022:39:0"
+        },
+        {
+          "contract": "MultisigWallet",
+          "path": "contracts/multisig/MultisigWallet.sol",
+          "label": "owners",
+          "astId": 76,
+          "type": "t_array:dyn<t_address>",
+          "src": "1067:23:0"
+        },
+        {
+          "contract": "MultisigWallet",
+          "path": "contracts/multisig/MultisigWallet.sol",
+          "label": "required",
+          "astId": 78,
+          "type": "t_uint256",
+          "src": "1096:20:0"
+        },
+        {
+          "contract": "MultisigWallet",
+          "path": "contracts/multisig/MultisigWallet.sol",
+          "label": "transactionCount",
+          "astId": 80,
+          "type": "t_uint256",
+          "src": "1122:28:0"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": []
+      }
+    },
+    "KRWb": {
+      "address": "0x37499992a3e27f563d752bbdd3566c9d87c1e109",
+      "constructorCode": "608060405234801561001057600080fd5b506153b7806100206000396000f300",
+      "bodyBytecodeHash": "1e0857366a58867d7d528be82405b79bdb3f17d476a7f8507a25f5923b69acff",
+      "localBytecodeHash": "4cfc9a4b218ae0c3a6e61e752b876f4c58d39e7d5ee2442c710a9ffb4a81f24b",
+      "deployedBytecodeHash": "4cfc9a4b218ae0c3a6e61e752b876f4c58d39e7d5ee2442c710a9ffb4a81f24b",
+      "types": {
+        "t_bool": {
+          "id": "t_bool",
+          "kind": "elementary",
+          "label": "bool"
+        },
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        },
+        "t_array:50<t_uint256>": {
+          "id": "t_array:50<t_uint256>",
+          "valueType": "t_uint256",
+          "length": "50",
+          "kind": "array",
+          "label": "uint256[50]"
+        },
+        "t_mapping<t_uint256>": {
+          "id": "t_mapping<t_uint256>",
+          "valueType": "t_uint256",
+          "label": "mapping(key => uint256)",
+          "kind": "mapping"
+        },
+        "t_address": {
+          "id": "t_address",
+          "kind": "elementary",
+          "label": "address"
+        },
+        "t_string": {
+          "id": "t_string",
+          "kind": "elementary",
+          "label": "string"
+        },
+        "t_uint8": {
+          "id": "t_uint8",
+          "kind": "elementary",
+          "label": "uint8"
+        },
+        "t_struct<ERC20WithFees.Fee>": {
+          "id": "t_struct<ERC20WithFees.Fee>",
+          "kind": "struct",
+          "label": "ERC20WithFees.Fee",
+          "members": [
+            {
+              "label": "numerator",
+              "astId": 1876,
+              "type": "t_uint256",
+              "src": "174:17:4"
+            },
+            {
+              "label": "denominator",
+              "astId": 1878,
+              "type": "t_uint256",
+              "src": "201:19:4"
+            }
+          ]
+        },
+        "t_mapping<t_struct<ERC20WithFees.Fee>>": {
+          "id": "t_mapping<t_struct<ERC20WithFees.Fee>>",
+          "valueType": "t_struct<ERC20WithFees.Fee>",
+          "label": "mapping(key => ERC20WithFees.Fee)",
+          "kind": "mapping"
+        },
+        "t_array:dyn<t_address>": {
+          "id": "t_array:dyn<t_address>",
+          "valueType": "t_address",
+          "length": "dyn",
+          "kind": "array",
+          "label": "address[]"
+        }
+      },
+      "storage": [
+        {
+          "contract": "Initializable",
+          "path": "zos-lib/contracts/Initializable.sol",
+          "label": "initialized",
+          "astId": 3022,
+          "type": "t_bool",
+          "src": "749:24:12"
+        },
+        {
+          "contract": "Initializable",
+          "path": "zos-lib/contracts/Initializable.sol",
+          "label": "initializing",
+          "astId": 3024,
+          "type": "t_bool",
+          "src": "868:25:12"
+        },
+        {
+          "contract": "Initializable",
+          "path": "zos-lib/contracts/Initializable.sol",
+          "label": "______gap",
+          "astId": 3073,
+          "type": "t_array:50<t_uint256>",
+          "src": "1883:29:12"
+        },
+        {
+          "contract": "ERC20",
+          "path": "contracts/token/ERC20.sol",
+          "label": "_balances",
+          "astId": 1281,
+          "type": "t_mapping<t_uint256>",
+          "src": "552:45:2"
+        },
+        {
+          "contract": "ERC20",
+          "path": "contracts/token/ERC20.sol",
+          "label": "_allowed",
+          "astId": 1287,
+          "type": "t_mapping<t_uint256>",
+          "src": "604:64:2"
+        },
+        {
+          "contract": "ERC20",
+          "path": "contracts/token/ERC20.sol",
+          "label": "_totalSupply",
+          "astId": 1289,
+          "type": "t_uint256",
+          "src": "675:28:2"
+        },
+        {
+          "contract": "ERC20",
+          "path": "contracts/token/ERC20.sol",
+          "label": "______gap",
+          "astId": 1687,
+          "type": "t_array:50<t_uint256>",
+          "src": "6949:29:2"
+        },
+        {
+          "contract": "Ownable",
+          "path": "contracts/token/Ownable.sol",
+          "label": "owner",
+          "astId": 2649,
+          "type": "t_address",
+          "src": "138:20:7"
+        },
+        {
+          "contract": "ERC20Detailed",
+          "path": "openzeppelin-eth/contracts/token/ERC20/ERC20Detailed.sol",
+          "label": "_name",
+          "astId": 2892,
+          "type": "t_string",
+          "src": "382:20:10"
+        },
+        {
+          "contract": "ERC20Detailed",
+          "path": "openzeppelin-eth/contracts/token/ERC20/ERC20Detailed.sol",
+          "label": "_symbol",
+          "astId": 2894,
+          "type": "t_string",
+          "src": "406:22:10"
+        },
+        {
+          "contract": "ERC20Detailed",
+          "path": "openzeppelin-eth/contracts/token/ERC20/ERC20Detailed.sol",
+          "label": "_decimals",
+          "astId": 2896,
+          "type": "t_uint8",
+          "src": "432:23:10"
+        },
+        {
+          "contract": "ERC20Detailed",
+          "path": "openzeppelin-eth/contracts/token/ERC20/ERC20Detailed.sol",
+          "label": "______gap",
+          "astId": 2948,
+          "type": "t_array:50<t_uint256>",
+          "src": "1002:29:10"
+        },
+        {
+          "contract": "ERC20WithFees",
+          "path": "contracts/token/ERC20WithFees.sol",
+          "label": "transferFeeReceiver",
+          "astId": 1881,
+          "type": "t_address",
+          "src": "233:34:4"
+        },
+        {
+          "contract": "ERC20WithFees",
+          "path": "contracts/token/ERC20WithFees.sol",
+          "label": "_transferFee",
+          "astId": 1883,
+          "type": "t_struct<ERC20WithFees.Fee>",
+          "src": "273:24:4"
+        },
+        {
+          "contract": "ERC20WithFees",
+          "path": "contracts/token/ERC20WithFees.sol",
+          "label": "_individualTransferFee",
+          "astId": 1887,
+          "type": "t_mapping<t_struct<ERC20WithFees.Fee>>",
+          "src": "303:46:4"
+        },
+        {
+          "contract": "ERC20WithBlacklist",
+          "path": "contracts/token/ERC20WithBlacklist.sol",
+          "label": "_blacklist",
+          "astId": 1699,
+          "type": "t_array:dyn<t_address>",
+          "src": "162:28:3"
+        },
+        {
+          "contract": "PausableERC20",
+          "path": "contracts/token/PausableERC20.sol",
+          "label": "_paused",
+          "astId": 2688,
+          "type": "t_bool",
+          "src": "195:20:8"
+        },
+        {
+          "contract": "BurnableERC20",
+          "path": "contracts/token/BurnableERC20.sol",
+          "label": "burnMin",
+          "astId": 1180,
+          "type": "t_uint256",
+          "src": "152:22:1"
+        },
+        {
+          "contract": "BurnableERC20",
+          "path": "contracts/token/BurnableERC20.sol",
+          "label": "burnMax",
+          "astId": 1182,
+          "type": "t_uint256",
+          "src": "180:22:1"
+        },
+        {
+          "contract": "MintableERC20",
+          "path": "contracts/token/MintableERC20.sol",
+          "label": "mintMin",
+          "astId": 2384,
+          "type": "t_uint256",
+          "src": "152:22:6"
+        },
+        {
+          "contract": "MintableERC20",
+          "path": "contracts/token/MintableERC20.sol",
+          "label": "mintMax",
+          "astId": 2386,
+          "type": "t_uint256",
+          "src": "180:22:6"
+        },
+        {
+          "contract": "MintableERC20",
+          "path": "contracts/token/MintableERC20.sol",
+          "label": "_mintWhitelist",
+          "astId": 2401,
+          "type": "t_array:dyn<t_address>",
+          "src": "307:32:6"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": []
+      }
+    }
+  },
+  "solidityLibs": {},
+  "proxies": {
+    "KRWb/MultisigWallet": [
+      {
+        "address": "0x5e30fc115d29504da86e48e067f0749324ad5373",
+        "version": "0.1.0",
+        "implementation": "0x454621ad83ebbc01367a8006080b15880f71e967"
+      }
+    ],
+    "KRWb/KRWb": [
+      {
+        "address": "0xf9fd7a89bfb8a07a225080236e5ca570ee2a76a1",
+        "version": "0.1.0",
+        "implementation": "0x37499992a3e27f563d752bbdd3566c9d87c1e109"
+      }
+    ]
+  },
+  "zosversion": "2",
+  "version": "0.1.0",
+  "dependencies": {
+    "openzeppelin-eth": {
+      "package": "0x778dddf23ec1b5cb18394c6c110480caadb3b0f6",
+      "version": "2.0.2"
+    }
+  }
+}

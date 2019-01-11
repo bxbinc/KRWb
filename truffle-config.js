@@ -21,6 +21,12 @@ module.exports = {
             network_id: 3,
             gasPrice: 20000000000
         },
+        live: {
+            provider: () =>
+                new HDWalletProvider(process.env.MAINNET_MNEMONIC, process.env.MAINNET_PROVIDER_URL, 0, 10),
+            network_id: 1,
+            gasPrice: 3100000000
+        },
         coverage: {
             host: "localhost",
             network_id: "*",
